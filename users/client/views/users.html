@@ -1,0 +1,34 @@
+<form>
+    <fieldset>
+        Get users:
+        <br>
+        <input autocomplete="off" type="text" name="per_page" placeholder="how many per page" ng-model="users_list.per_page" ng-disabled="loading" />
+        <br>
+        <input autocomplete="off" type="text" name="page" placeholder="page" ng-model="users_list.page" ng-disabled="loading" />
+        <br>
+        <button type="submit" ng-disabled="loading" ng-click="getAllUsers()">get</button>
+    </fieldset>
+</form>
+<br>
+<form>
+    <fieldset>
+        Get user by id:
+        <br>
+        <input autocomplete="off" type="text" name="page" placeholder="user id" ng-model="get_user.user_id" ng-disabled="loading" />
+        <br>
+        <button type="submit" ng-disabled="loading" ng-click="getUser()">get</button>
+    </fieldset>
+</form>
+<br>
+<form>
+    <fieldset>
+        Delete user by id:
+        <br>
+        <input autocomplete="off" type="text" name="page" placeholder="user id" ng-model="delete_user.user_id" ng-disabled="loading" />
+        <br>
+        <button type="submit" ng-disabled="loading" ng-click="deleteUser()">delete</button>
+    </fieldset>
+</form>
+
+<h1 ng-show="result">Result:</h1>
+<pre><code>{{result|json}}</code></pre>

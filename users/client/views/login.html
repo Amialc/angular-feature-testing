@@ -1,0 +1,30 @@
+<div id="login-container">
+  <!-- <button ng-click="popupLogin()">Popup login</button> -->
+  <br>
+  <form>
+    <fieldset>
+      Custom Login:
+      <br>
+      <input type="text" name="user" placeholder="email" ng-model="user" ng-disabled="loading" />
+      <br>
+      <input type="password" name="pass" placeholder="password" ng-model="pass" ng-disabled="loading" />
+      <br>
+      <button type="submit" ng-disabled="loading" ng-click="doLogin()">login</button>
+    </fieldset>
+  </form>
+
+  <br>
+  <form>
+    <fieldset>
+      Custom Signup with Extra Fields:
+      <br>
+      <input type="text" name="user" placeholder="email" ng-model="signup.user" />
+      <br>
+      <input type="password" name="pass" placeholder="password" ng-model="signup.pass" />
+      <br>
+      <input type="text" name="color" placeholder="favorite color" ng-model="signup.favColor" />
+      <br>
+      <button type="submit" ng-click="doSignup()">signup</button>
+    </fieldset>
+  </form>
+</div>
